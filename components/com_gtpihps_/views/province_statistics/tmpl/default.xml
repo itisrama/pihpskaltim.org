@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_GTPIHPS_PROVINCE_STATISTICS_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_GTPIHPS_PROVINCE_STATISTICS_VIEW_DEFAULT_TITLE]]>
+		</message>
+	</layout>
+
+	<fields name="params">
+		<fieldset name="params"
+			label="Parameter"
+		>
+			<field name="price_type_id"
+				type="radio"
+				label="Price Type"
+				class="bootstrap-radio"
+			>
+				<option value="1">Traditional</option>
+				<option value="2">Modern</option>
+				<option value="3">Wholesale</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

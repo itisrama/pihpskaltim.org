@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields>
+		<fieldset addfieldpath="/administrator/components/com_jkcommodity/models/fields">
+			<field
+				type="calendar"
+				name="start_date"
+				class="input-medium"
+				id="start_date"
+				label="COM_JKCOMMODITY_LABEL_DATE_START"
+				format="%d-%m-%Y"
+				filter=" "
+			/>
+			<field
+				type="calendar"
+				name="end_date"
+				class="input-medium"
+				id="end_date"
+				label="COM_JKCOMMODITY_LABEL_DATE_END"
+				format="%d-%m-%Y"
+				filter=" "
+			/>
+			<field
+				type="sql"
+				name="city_id"
+				id="city_id"
+				label="COM_JKCOMMODITY_LABEL_CITY"
+				description="COM_JKCOMMODITY_LABEL_CITY_DESC"
+				default="0"
+				multiple="true"
+				size="3"
+				query="SELECT `id` `value`, `name` `city_id` FROM #__jkcommodity_city WHERE published = '1' AND `type` = 'consumer'"
+			>
+				<option value="0">COM_JKCOMMODITY_FIELD_ALL_CITY</option>
+			</field>
+			<field
+				type="market"
+				name="market_id"
+				id="market_id"
+				label="COM_JKCOMMODITY_LABEL_MARKET"
+				description="COM_JKCOMMODITY_LABEL_MARKET_DESC"
+				default="0"
+				multiple="true"
+				size="4"
+			>
+				<option value="0">COM_JKCOMMODITY_FIELD_ALL_MARKET</option>
+			</field>
+			<field
+				type="commodity"
+				name="commodity_id"
+				id="commodity_id"
+				class="inputbox"
+				label="COM_JKCOMMODITY_LABEL_COMMODITY"
+				description="COM_JKCOMMODITY_LABEL_COMMODITY_DESC"
+				default="0"
+				multiple="true"
+				size="5"
+			></field>
+			<field
+				type="checkbox"
+				name="all_commodity"
+				class="inputbox"
+				id="all_commodity"
+				value="1"
+				default="0"
+			/>
+			<field
+				type="list"
+				name="layout"
+				id="layout"
+				class="inputbox input-medium"
+				label="COM_JKCOMMODITY_FIELD_REPORT_TYPE"
+				default="default"
+			>
+				<option value="default">COM_JKCOMMODITY_FIELD_REPORT_TYPE_DEFAULT</option>
+				<option value="weekly">COM_JKCOMMODITY_FIELD_REPORT_TYPE_WEEKLY</option>
+				<option value="monthly">COM_JKCOMMODITY_FIELD_REPORT_TYPE_MONTHLY</option>
+				<option value="yearly">COM_JKCOMMODITY_FIELD_REPORT_TYPE_YEARLY</option>
+				<option value="market">COM_JKCOMMODITY_FIELD_REPORT_TYPE_MARKET</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

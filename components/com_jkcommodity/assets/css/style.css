@@ -1,0 +1,28 @@
+#com_jkcommodity .table th label {
+	font-weight: bold;
+	text-align: center;
+}
+
+#com_jkcommodity .table th,
+#com_jkcommodity .table td {
+	vertical-align: middle;
+}
+
+#com_jkcommodity .table td.actions {
+	text-align: center;
+}
+
+#com_jkcommodity .jkcolumn {
+	overflow: visible;
+}
+
+#com_jkcommodity .jkcolumn > div {
+	display: inline-block;
+	margin-right: 15px;
+	vertical-align: top;
+	overflow: visible;
+}
+
+#com_jkcommodity .modal{
+	top: 500px;
+}

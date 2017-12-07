@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_jkcommodity/models/fields">
+	<fields name="category">
+		<fieldset name="detail">
+			<field name="name"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_CATEGORY"
+				class="input-large"
+			/>
+		</fieldset>
+	</fields>
+	<fields>
+		<fieldset name="detail">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_JKCOMMODITY_NAME"
+				class="input-large"
+			/>
+			<field name="type"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_TYPE"
+				class="input-large"
+			/>
+			<field name="denomination"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_DENOMINATION"
+				class="input-large"
+			/>
+		</fieldset>
+		<fieldset name="edit">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="category_id"
+				type="categories"
+				label="COM_JKCOMMODITY_LABEL_CATEGORY"
+				class="input-xlarge"
+				required="true" 
+			>
+				<option value="0">COM_JKCOMMODITY_FIELD_NO_CATEGORY</option>
+			</field>
+			<field name="name"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_NAME"
+				class="input-large"
+				required="true" 
+			/>
+			<field name="short_name"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_SHORT_NAME"
+				class="input-large"
+			/>
+			<field name="denomination"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_DENOMINATION"
+				class="input-large"
+			/>
+			<field name="type"
+				type="list"
+				label="COM_JKCOMMODITY_LABEL_TYPE"
+				class="input-xlarge"
+				required="true" 
+			>
+			    <option value="producer">COM_JKCOMMODITY_LABEL_PRODUCER</option>
+			    <option value="consumer">COM_JKCOMMODITY_LABEL_CONSUMER</option>
+			</field>
+			<field name="key"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_CODE_COMMODITY"
+				class="input-large"
+			/>
+		</fieldset>
+	</fields>
+</form>

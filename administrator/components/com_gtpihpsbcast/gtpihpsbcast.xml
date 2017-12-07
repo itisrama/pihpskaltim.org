@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_GTPIHPSBCAST</name>
+	<creationDate>August 2012</creationDate>
+	<author>Yudhistira Ramadhan</author>
+	<authorEmail>gtweb@gamatechno.com</authorEmail>
+	<authorUrl>http://www.gt.web.id</authorUrl>
+	<copyright>Copyright (C) 2012 GtWeb Gamatechno. All Rights Reserved.</copyright>
+	<license>GNU/GPL, http://www.gnu.org/licenses/gpl.html</license>
+	<version>1.1.0</version>
+	<description><![CDATA[COM_GTPIHPSBCAST_DESCRIPTION]]></description>
+	<install>
+	</install>
+	<uninstall>
+	</uninstall>
+	<update>
+	</update>
+	<files folder="site">
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>temp</folder>
+		<folder>views</folder>
+		<filename>gtpihpsbcast.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+	</files>
+	<administration>
+		<menu>COM_GTPIHPSBCAST</menu>
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>core</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>libraries</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>temp</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>constants.php</filename>
+			<filename>gtpihpsbcast.php</filename>
+			<filename>gtpihpsbcast.xml</filename>
+			<filename>index.html</filename>
+			<filename>loader.php</filename>
+		</files>
+	</administration>
+</extension>

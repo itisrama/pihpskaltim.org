@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihpsbcast/models/fields">
+	<fields>
+		<fieldset name="item">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="group_ids"
+				type="sql"
+				query="SELECT id value, name group_ids FROM #__gtpihpsbcast_groups"
+				label="COM_GTPIHPSBCAST_FIELD_GROUPS"
+				class="input-medium"
+				multiple="multiple"
+				required="true" 
+			/>
+			<field name="commodity_ids"
+				type="commodity"
+				label="COM_GTPIHPSBCAST_FIELD_COMMODITY"
+				class="input-medium"
+				size="6"
+				multiple="multiple"
+				required="true"
+			/>
+			<field name="market_ids"
+				type="market"
+				label="COM_GTPIHPSBCAST_FIELD_MARKET"
+				class="input-medium"
+				size="6"
+				multiple="multiple"
+				required="true"
+			/>
+			<field name="schedules"
+				type="checkboxes"
+				label="COM_GTPIHPSBCAST_FIELD_SCHEDULES"
+			>
+				<option value="0">SUNDAY</option>
+				<option value="1">MONDAY</option>
+				<option value="2">TUESDAY</option>
+				<option value="3">WEDNESDAY</option>
+				<option value="4">THURSDAY</option>
+				<option value="5">FRIDAY</option>
+				<option value="6">SATURDAY</option>
+			</field>
+			<field name="type"
+				type="radio"
+				class="bootstrap-radio"
+				label="COM_GTPIHPSBCAST_FIELD_TYPE"
+				default="commodity" 
+			>
+				<option value="commodity">COM_GTPIHPSBCAST_OPTION_TYPE_COMMODITY</option>
+				<option value="market">COM_GTPIHPSBCAST_OPTION_TYPE_MARKET</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

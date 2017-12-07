@@ -1,0 +1,355 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+// ---------------------------------------------------------
+// MAIN TEMPLATE STYLES
+// ---------------------------------------------------------
+.t3-wrapper {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 45px;
+}
+// 
+// HEADER
+// ---------------------------------------------------------
+
+.t3-header {
+	padding-top: @t3-global-padding;
+	padding-bottom: @t3-global-padding;
+}
+
+// Logo
+// ----
+.logo {
+	display: inline-block;
+	background-color: @white;
+	padding: 10px 15px 10px 0;
+	height: @navbar-height;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+
+
+	// Left align the logo on  Tablets / Desktop
+	@media screen and (min-width: @screen-sm) {
+		text-align: left;
+	}
+
+	a {
+		display: inline-block;
+		line-height: 1;
+		margin: 0;
+	}
+}
+
+// Logo Image
+// ----------
+
+.logo-image {
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	h1, a, .site-slogan {
+		display: inline-block;
+		vertical-align: top;
+	}
+	h1 {
+		color: transparent;
+		font: 0px/0 a;
+		height: @t3-logo-height !important;
+		width: @t3-logo-width !important;
+		background-size: 100%;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: left center;
+		
+	}
+	.site-slogan {
+		border-left: 2px solid @gray-light;
+		color: @gray;
+		text-transform: uppercase;
+		width: 150px;
+		margin-left: 10px;
+		padding-left: 10px;
+		font-size: @font-size-base;
+	}
+}
+
+// Logo Text
+// ----------
+.logo-text {
+
+	a {
+		text-decoration: none;
+		font-size: ceil(@font-size-base * 2);
+		font-weight: bold;
+	}
+
+	&:hover a,
+	a:hover,
+	a:active,
+	a:focus {
+		text-decoration: none;
+	}
+
+	// Taglines
+	.site-slogan {
+		display: block;
+		font-size: @font-size-base;
+		margin-top: 5px;
+	}
+
+}
+
+// Head Search
+// -----------
+.head-search {
+
+	margin-top: @t3-global-margin;
+	.clearfix();
+
+	form {
+		margin: 0;
+	}
+	
+	label {
+		display: none;
+	}
+	
+	.search {
+		position: relative;
+		// Place a search icon
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f002";
+			display: block;
+			position: absolute;
+			left: 10px;
+			top: 6px;
+			color: @gray;
+		}
+		// Float to right on Tablets / Desktop
+		@media screen and (min-width: @screen-sm) {
+			float: right;
+		}
+	}
+	
+	.form-control {
+		width : 100%;
+		padding-left: 30px;
+
+		// Width Control on Tablets / Desktop
+		@media screen and (min-width: @screen-sm) {
+			width: 150px;
+			// focus state
+			&:focus {
+				width: 200px;
+			}
+		}
+
+	}
+
+}
+
+
+
+// ---------------------------------------------------------
+// SPOTLIGHTS
+// ---------------------------------------------------------
+
+.t3-sl {
+	padding: 0;
+	margin-bottom: @t3-global-margin;
+	margin-top: @t3-global-margin;
+	// Larger padding in Tablet / Desktop
+	@media screen and (min-width: @screen-sm) {
+		margin-bottom: @t3-global-margin;
+		margin-top: @t3-global-margin;
+	}
+
+	.row:last-child .t3-module:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Spotlight 1
+// -----------
+.t3-sl-1 {
+}
+
+// Spotlight 2
+// -----------
+.t3-sl-2 {
+}
+
+// Spotlight 3
+// -----------
+.t3-sl-3 {
+}
+
+// Spotlight 4
+// -----------
+.t3-sl-4 {
+}
+
+
+
+// ---------------------------------------------------------
+// MAIN BODY
+// ---------------------------------------------------------
+.t3-mainbody {
+	padding-top: @line-height-computed ;
+	padding-bottom: @line-height-computed;
+}
+
+// Content
+// -------
+.t3-content {
+	padding: 0;
+}
+
+// Sidebars
+// --------
+.t3-sidebar {
+	padding-top: @line-height-computed;
+	padding-bottom: @line-height-computed;
+}
+
+.t3-sidebar-1 {
+}
+
+.t3-sidebar-2 {
+}
+
+
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+.t3-footer {
+	/*border-top: 1px solid @t3-border-color;*/
+	background: @t3-footer-background;
+	color: @t3-footer-text-color;
+	.clearfix();
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	// small
+	small {
+		display: block;
+		font-size: 100%; //Use global footer font size.
+	}
+
+	// links
+	a {
+		// Link States
+		&:hover, &:active, &:focus {
+		}
+	}
+
+}
+
+// Foot Nav
+// --------
+.t3-footnav {
+	padding: @t3-global-padding 0;
+	.clearfix();
+
+	// Larger padding on Tablet / Desktop
+	@media screen and (min-width: @screen-sm) {
+		padding: (@t3-global-padding * 2) 0;
+	}
+
+	// Footnav Modules
+	.t3-module {
+		background: @t3-footer-module-background;
+		color: @t3-footer-module-text-color;
+		margin-top: @line-height-computed / 2;
+		margin-bottom: @line-height-computed / 2;
+
+		.module-title {
+			color: @t3-footer-module-title-color;
+			font-size: @font-size-large;
+			margin-bottom: @line-height-computed / 2;
+		}
+
+		ul {
+			list-style: none;
+			margin-left: 0;
+			margin-bottom: 0;
+			padding-left: 0;
+
+			> li {
+				line-height: 24px;
+				// links
+				> a {
+					color: @t3-footer-module-text-color;
+					// Link States
+					&:hover, &:active, &:focus {
+						color: @t3-footer-module-text-color;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+// Copyright
+// ---------
+.t3-copyright {
+	/*border-top: 1px solid @t3-border-color;*/
+	font-size: @font-size-small;
+	padding: (@t3-global-padding/2) 0 (@t3-global-padding/2);
+	.clearfix();
+	small {
+		margin-bottom: 5px;
+	}
+}
+
+.copyright {
+	text-align: center;
+	.poweredby, .module {
+		display: inline-block;
+		margin: 5px 5px;
+	}
+}
+
+.poweredby {
+	.clearfix();
+
+	// Align right on Tablet / Desktop
+	@media screen and (min-width: @screen-sm-max) {
+		text-align: right;
+	}
+
+	.t3-logo,
+	.t3-logo-small {
+		opacity: .8;
+		display: inline-block;
+	}
+}
+
+.js-calendar {
+	color: @gray-darker !important;
+	a {
+		color: @gray-darker !important;
+	}
+}
+
+.input-group > input {
+	width: 100% !important;
+}

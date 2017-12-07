@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.4" method="upgrade">
+	<name>pdf_embed Package</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright(C)2009-15 TechJoomla</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>1st October 2015</creationDate>
+	<version>2.1.5</version>
+	<packagename>pdf_embed</packagename>
+	<packager>Techjoomla Team</packager>
+	<description><![CDATA[
+	<div><div style='float:left'><h2>Embed - PDF </h2><ul><li>Steps -<br>1.Enable content- PDF Embed.<br>2. Enable Button - Embed PDF<br> 3. Go to the article and click EMBED - PDF button<br>4. Add fields in pop-up box.<br>Save the article.<li>Syntax -<br>For native Relative path - {pdf=images/pdf/example.pdf|100%|500|native} OR Absolute path -  {http://sitename.com/images/pdf/example.pdf|100%|500|native}<br>For google {pdf=http://sitename.com/example.pdf|100%|500|google}<br>For pdfjs {pdf=http://yoursitename.com/example.pdf|100%|500|pdfjs}<br></li><li>Note - Native viewer is not compatible with a mobile devices</li><li>Read the <a target='_blank' href='https://techjoomla.com/documentation-for-pdf-embed/installation-setup-usage-instructions-for-pdf-embed.html'>plugin documentation</a></li><li>Show us your ♥: <a target="_blank" href="http://extensions.joomla.org/extensions/extension/social-web/social-display/pdf-embed">Review on the JED</a></li></ul><br>Thank you for using a Techjoomla! extension</div><p style='clear:both'/></div>
+	]]></description>
+	<files folder="packages">
+		<file type="plugin" id="pdf_btn" group="editors-xtd">pdf_btn.zip</file>
+		<file type="plugin" id="pdf_embed" group="content">pdf_embed.zip</file>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="PDF Embed"><![CDATA[https://techjoomla.com/updates/packages/all?dummy=pdf_embed.xml]]></server>
+	</updateservers>
+</extension>

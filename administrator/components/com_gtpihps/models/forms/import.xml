@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihps/models/fields">
+    <fields>
+		<fieldset name="main">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="region_id"
+				type="regionformat"
+				label="COM_GTPIHPS_FIELD_REGION"
+				class="input-xlarge"
+				format="excel" 
+				required="true" 
+			>
+				<option>COM_GTPIHPS_SELECT_REGION</option>
+			</field>
+			<field name="date"
+				type="altcalendar"
+				id="date"
+				label="COM_GTPIHPS_FIELD_DATE"
+				class="input-medium"
+				format="%d-%m-%Y"
+				filter=" "
+				required="true"
+			/>
+			<field name="file_excel"
+			    type="file"
+			    accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+				label="COM_GTPIHPS_FIELD_FILE"
+				class="input-xlarge"
+				required="true"
+			/>
+		</fieldset>
+	</fields>
+</form>

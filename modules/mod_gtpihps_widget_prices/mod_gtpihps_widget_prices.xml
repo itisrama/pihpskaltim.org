@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.2" client="site" method="upgrade">
+    <name>Widget Tabel Komoditas Harga Pangan</name>
+    <author>GT</author>
+    <version>1.0.2</version>
+    <description>Module untuk widget tabel komoditas harga pangan</description>
+    <files>
+        <filename>mod_gtpihps_widget_prices.xml</filename>
+        <filename module="mod_gtpihps_widget_commodities">mod_gtpihps_widget_prices.php</filename>
+        <filename>index.html</filename>
+        <filename>font-awesome.js</filename>
+        <filename>script.js</filename>
+
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+
+        <filename>css/cleanstate.css</filename>
+        <filename>css/font-awesome.css</filename>
+        <filename>css/gtpihps-widget.css</filename>
+        <filename>css/gtpihps-theme.css</filename>
+        <filename>css/index.html</filename>
+
+        <filename>fonts/FontAwesome.otf</filename>
+        <filename>fonts/fontawesome-webfont.eot</filename>
+        <filename>fonts/fontawesome-webfont.svg</filename>
+        <filename>fonts/fontawesome-webfont.ttf</filename>
+        <filename>fonts/fontawesome-webfont.woff</filename>
+        <filename>fonts/fontawesome-webfont.woff2</filename>
+        <filename>fonts/index.html</filename>
+    </files>
+    <config>	
+    	<fields name="params">
+    		<fieldset name="basic">
+                <field 
+                    name="theme" 
+                    type="list" 
+                    default="light" 
+                    label="Pilih Tema Widget" 
+                    description="">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="light_blue">Light Blue</option>
+                    <option value="black_white">Black and White</option>
+                </field>
+
+                <field name="show_province" type="checkbox" label="Dropdown Provinsi" description="" value="1" />
+
+        		<field
+             		name="province_id"
+               		type="sql"
+               		default="0"
+               		label="Pilih Provinsi"
+               		query="SELECT id, name FROM #__gtpihpssurvey_ref_provinces WHERE published = 1"
+               		key_field="id"
+    				value_field="name"
+               	>
+               	<option value="0">Semua Provinsi</option>
+               </field>
+
+               <field name="show_city" type="checkbox" label="Dropdown Kota/Kabupaten" description="" value="1" />
+
+               <field
+                    name="city_id"
+                    type="sql"
+                    default="0"
+                    label="Pilih Kota/Kabupaten"
+                    query="SELECT id, name FROM #__gtpihpssurvey_ref_regencies WHERE published = 1"
+                    key_field="id"
+                    value_field="name"
+                >
+                <option value="0">Semua Kota/Kabupaten</option>
+               </field>
+
+               <field name="show_market" type="checkbox" label="Dropdown Pasar" description="" value="1" />
+
+               <field
+                    name="market_id"
+                    type="sql"
+                    default="0"
+                    label="Pilih Pasar"
+                    query="SELECT id, name FROM #__gtpihpssurvey_ref_markets WHERE published = 1"
+                    key_field="id"
+                    value_field="name"
+                >
+                <option value="0">Semua Pasar</option>
+               </field>
+    		</fieldset>
+		</fields>
+    </config>
+</extension>

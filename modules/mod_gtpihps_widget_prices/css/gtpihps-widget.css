@@ -1,0 +1,97 @@
+@import cleanslate.css;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+
+.gtpihps-price{
+	float: left !important;
+	font-family: "Roboto Condensed", sans-serif !important;
+	width: 100% !important;
+}
+
+.gtpihps-price .gtpihps-items table{
+	margin: auto !important;
+	width: 100% !important;
+}
+
+.gtpihps-price .gtpihps-items table td{
+	padding: 5px 10px !important;
+}
+
+/* Table columns */
+.gtpihps-price .gtpihps-items table tr.gtpihps-commodity td:first-child{
+	padding-left: 30px !important;
+}
+
+.gtpihps-price .gtpihps-items table tr.gtpihps-commodity td:nth-child(2){
+	width: 70px !important;
+}
+
+.gtpihps-price .gtpihps-items table tr.gtpihps-commodity td:nth-child(3){
+	text-align: center;
+	width: 50px !important;
+}
+
+.gtpihps-price .gtpihps-items table tr.gtpihps-commodity td:last-child{
+	text-align: center;
+	width: 30px !important;
+}
+
+/* Enables vertical scrolling */
+.gtpihps-price,
+.gtpihps-price .cleanslate,
+.gtpihps-price .gtpihps-pricetable,
+.gtpihps-price .gtpihps-items{
+	height: inherit !important;
+}
+
+.gtpihps-price select{
+    border: 1px solid #cccccc !important;
+    border-radius: 0 !important;
+    height: 32px !important;
+    margin-bottom: 5px !important;
+    max-width: 200px;
+    padding: 6px 12px !important;
+    width: 100%;
+    webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+}
+
+.gtpihps-price .gtpihps-header{
+	text-align: center !important;
+}
+
+.gtpihps-price .gtpihps-header b,
+.gtpihps-price .gtpihps-header small{
+    display: inline-block;
+	margin-right: 10px !important;
+}
+
+.gtpihps-price .gtpihps-filter{
+	text-align: center !important;
+	width: 100% !important;
+}
+
+.gtpihps-price .gtpihps-items{
+	margin: auto !important;
+	max-width: 400px !important;
+	position: relative !important;
+	overflow: scroll !important;
+}
+
+/* Price title text */
+.gtpihps-price .gtpihps-pricetable a{
+    text-decoration: none !important;
+}
+
+.gtpihps-price .gtpihps-hidden {
+    display: none !important;
+}
+
+/* Custom Scrollbar */
+.gtpihps-price .gtpihps-items::-webkit-scrollbar{
+	width: 0.5em;
+}
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihpsbcast/models/fields">
+	<fields>
+		<fieldset name="item">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPSBCAST_FIELD_NAME"
+				class="input-xlarge"
+				required="true"
+			/>			
+			<field name="members"
+				type="selectize"
+				multiple="true"
+				query="SELECT id, name FROM #__gtpihpsbcast_contacts WHERE id IN (%s) ORDER BY name"
+				task="contacts.selectize"
+				requests="{}"
+				label="COM_GTPIHPSBCAST_FIELD_MEMBERS"
+				class="input-xxlarge"
+			/>
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,169 @@
+#com_gtpihps .command {
+	margin-bottom: 0 !important;
+	padding: 0 0 10px;	
+	min-height: 20px;
+}
+#com_gtpihps .table th label {
+	font-weight: bold;
+	text-align: center;
+}
+
+#com_gtpihps .table.valign-top td {
+	vertical-align: top;
+}
+#com_gtpihps .table td {
+	vertical-align: middle;
+}
+
+
+#com_gtpihps .table td.actions {
+	text-align: center;
+}
+
+#com_gtpihps .jkcolumn {
+	overflow: visible;
+}
+
+#com_gtpihps .jkcolumn > div {
+	display: inline-block;
+	margin-right: 15px;
+	vertical-align: top;
+	overflow: visible;
+}
+
+#com_gtpihps .table-sorted tr {
+	cursor: pointer;
+}
+#com_gtpihps .table-sorted tr.placeholder {
+	background: none repeat scroll 0 0 red;
+	border: medium none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#com_gtpihps .table-sorted tr.placeholder:before {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: transparent -moz-use-text-color transparent red;
+	border-image: none;
+	border-style: solid none solid solid;
+	border-width: 10px medium 10px 10px;
+	content: "";
+	height: 0;
+	left: -10px;
+	margin-top: -10px;
+	position: absolute;
+	width: 0;
+}
+
+#com_gtpihps .nav p.lead {
+	font-size: 1.1em;
+	margin-bottom: 0;
+}
+#com_gtpihps tr.head td {
+	background-color: gray;
+	color: white;
+}
+
+#com_gtpihps .currency {
+	white-space: nowrap;
+}
+
+#com_gtpihps .table .btn {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#com_gtpihps .tablegrid {
+	float: left;
+	width: 100%;
+	overflow-x: auto;
+}
+
+#com_gtpihps .form-inline {
+	margin-bottom: -10px;
+}
+#com_gtpihps .form-inline .form-group {
+	margin-bottom: 0;
+}
+#com_gtpihps .form-inline label, 
+#com_gtpihps .form-inline input, 
+#com_gtpihps .form-inline button, 
+#com_gtpihps .form-inline select, 
+#com_gtpihps .form-inline textarea {
+	margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+	#com_gtpihps .form-inline .pull-right {
+		float: none !important;
+	}
+}
+
+#com_gtpihps #report tr td:first-child {
+	max-width: 200px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#com_gtpihps #report-header h4 {
+	font-size: 1.5em;
+}
+#com_gtpihps #report-header span {
+	display: inline-block;
+	width: 120px;
+}
+
+#com_gtpihps .status .label {
+	display: inline-block;
+	line-height: normal;
+	width: 20px;
+	text-align: center;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+#com_gtpihps .legend { 
+}
+#com_gtpihps .legend table,
+#com_gtpihps .legend td {
+	border: none !important;
+}
+#com_gtpihps .legend td {
+
+}
+#com_gtpihps .legend tr:first-child .legendColorBox {
+	padding-top: 8px
+}
+#com_gtpihps .legend tr:first-child .legendLabel {
+	padding-top: 7px
+}
+#com_gtpihps .legend tr:last-child .legendColorBox {
+	padding-bottom: 10px
+}
+#com_gtpihps .legendColorBox > div {
+	border: 1px solid #FFF !important;
+	padding: 0 !important;
+}
+#com_gtpihps .legendColorBox {
+	padding: 4px 4px 4px 8px;
+}
+#com_gtpihps .legendLabel {
+	font-size: 8pt;
+	padding: 2px 8px 2px 5px;
+	color: #fff;
+}
+#com_gtpihps .hideLegend .legend table {
+	display: none !important;
+}
+#com_gtpihps .legend table {
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid rgba(0,0,0,0.6) !important;
+	padding: 10px;
+}
+
+#com_gtpihps .legend > div {
+	display: none;
+}

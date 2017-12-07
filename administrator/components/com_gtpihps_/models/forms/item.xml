@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihps/models/fields">
+	<fields>
+		<fieldset name="optional1">
+			<field name="doc_num_long"
+				type="text"
+				label="COM_GTPIHPS_FIELD_DOC_NUM_LONG"
+				class="input-medium input-lg"
+				readonly="true"
+			/>
+		</fieldset>
+		<fieldset name="optional2">
+			<field name="doc_num_type"
+				type="radio"
+				class="bootstrap-radio"
+				label="COM_GTPIHPS_FIELD_DOC_NUM_TYPE"
+				default="auto"
+			>
+				<option value="auto">COM_GTPIHPS_OPTION_AUTO</option>
+				<option value="manual">COM_GTPIHPS_OPTION_MANUAL</option>
+			</field>
+		</fieldset>
+		<fieldset name="item">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="title"
+				type="text"
+				label="COM_GTPIHPS_FIELD_TITLE"
+				class="input-xlarge"
+				required="true"
+			/>			
+			<field name="disposition"
+				type="text"
+				label="COM_GTPIHPS_FIELD_DISPOSITION"
+				class="input-xlarge"
+				required="true"
+			/>			
+			<field name="division"
+				type="sql"
+				query="SELECT code value, name division FROM #__gtpihps_ref_divisions"
+				label="COM_GTPIHPS_FIELD_DIVISION"
+				class="input-medium"
+				required="true" 
+			>
+				<option value="">COM_GTPIHPS_SELECT_DIVISION</option>
+			</field>
+			<field name="doc_type"
+				type="sql"
+				query="SELECT code value, name doc_type FROM #__gtpihps_ref_doc_types"
+				label="COM_GTPIHPS_FIELD_DOC_TYPE"
+				class="input-medium"
+				required="true" 
+			>
+				<option value="">COM_GTPIHPS_SELECT_DOC_TYPE</option>
+			</field>
+			
+			<field name="doc_num"
+				type="text"
+				label="COM_GTPIHPS_FIELD_DOC_NUM"
+				class="input-small"
+				readonly="true"
+			/>	
+			<field name="doc_date"
+				type="altcalendar"
+				id="doc_date"
+				label="COM_GTPIHPS_FIELD_DOC_DATE"
+				class="input-small"
+				format="%d-%m-%Y"
+				filter=" "
+				required="true"
+			/>		
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template">
+	<name>widget</name>
+	<creationDate>2017-03-26</creationDate>
+	<author>Isnainul Fahrizal</author>
+	<authorEmail>isnainul.fahrizal@gmail.com</authorEmail>
+	<authorUrl>http://www.example.com</authorUrl>
+	<copyright>CC</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.2</version>
+	<description>Widget Template</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+	</files>
+	<positions>
+		<position>main</position>
+	</positions>
+</extension>

@@ -1,0 +1,195 @@
+<?php
+defined('JPATH_PLATFORM') or die;
+
+class JFormFieldTableGridBo extends JFormField
+{
+	
+	/**
+	 * The form field type.
+	 *
+	 * @var    string
+	 * @since  3.2
+	 */
+	public $subForm;
+	
+	protected $type = 'TableGrid';
+	
+	/**
+	 * Method to get the field input markup.
+	 *
+	 * @return  string  The field input markup.
+	 *
+	 * @since   3.2
+	 */
+	public function setup(SimpleXMLElement $element, $value, $group = null) {
+		parent::setup($element, $value, $group);
+		
+		$this->subForm = $this->getSubForm();
+		return true;
+	}
+	
+	protected function getInput() {
+		$names = array();
+		$attributes = $this->element->attributes();
+		$fields = $this->subForm->getFieldset($attributes->name . '_input');
+		
+		$id = $this->id;
+		$class = $this->element['class'];
+		$labeltext = trim(str_replace(array('*', '&#160;'), '', strip_tags($this->getLabel($this->name))));
+		
+		$str = array();
+
+		$disableAdd = @$attributes->disableadd;
+		$disableDel = @$attributes->disabledelete;
+
+		if(!$disableAdd) {
+			$str[] = '<button id="' . $id . '_toggle" class="btn btn-success" type="button">';
+			$str[] = '<i class="icon-new icon-white"></i> ' . str_replace('%s', $labeltext, JText::_('COM_JKCOMMODITY_MANAGER_NEW'));
+			$str[] = '</button>';
+		}
+
+		$str[] = '<div id="' . $id . '_form" class="modal fade" data-backdrop="static">';
+		$str[] = '<div class="modal-dialog">';
+		$str[] = '<div class="modal-content">';
+		$str[] = '<div class="modal-header">';
+
+		$str[] = '<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>';
+		$str[] = '<h4 class="modal-title edit">'.str_replace('%s', $labeltext, JText::_('COM_JKCOMMODITY_MANAGER_EDIT')).'</h4>';
+		$str[] = '<h4 class="modal-title new">'.str_replace('%s', $labeltext, JText::_('COM_JKCOMMODITY_MANAGER_NEW')).'</h4>';
+		$str[] = '</div>';
+
+		$str[] = '<div class="modal-body">';
+		foreach ($fields as $field) {
+			$required	= $field->element['grid-required'];
+			$label		= $field->getLabel($field->name);
+			$input		= $field->getInput();
+
+			if($required == true) {
+				$input	= str_replace('name="', 'tablegrid="required" name="', $input);
+				$label 	= str_replace('</label>', '<span class="star">&nbsp;*</span></label>', $label);
+			}
+			$names[] = strval($field->fieldname);
+			$resetClass = !@$field->element['disablereset'] ? ' reset' : null;
+			if (in_array($field->type, array('Hidden', 'AltHidden'))) {
+				$str[] = '<div class="control-group inputField'.$resetClass.'" style="display:none">';
+				$str[] = '<div class="control-label"></div>';
+				$str[] = '<div class="controls">'.$field->getInput().'</div>';
+				$str[] = '</div>';
+				continue;
+			}
+			
+			$str[]	= JKHelperFieldset::tplEditFieldBo($label, $input, 'inputField'.$resetClass);
+		}
+		
+		$str[] = '</div>';
+		$str[] = '<div class="modal-footer">';
+		$str[]	= '<button class="addItem btn btn-success" type="button"><i class="icon-apply icon-white"></i> ' . JText::_('COM_JKCOMMODITY_LABEL_ADD') . '</button>';
+		$str[]	= '<button class="saveItem btn btn-success" type="button" style="display:none"><i class="icon-apply icon-white"></i> ' . JText::_('COM_JKCOMMODITY_LABEL_SAVE') . '</button>';
+		$str[]	= '<button class="cancelItem btn btn-warning" type="button"><i class="icon-cancel"></i> ' . JText::_('COM_JKCOMMODITY_LABEL_CLOSE') . '</button>';
+	
+		$width = 0;
+		foreach ($fields as $field) {
+			if (in_array($field->type, array('Hidden', 'AltHidden'))) continue;
+			$width += 150;
+		}
+		$str[] = '</div>';
+		$str[] = '</div>';
+		$str[] = '</div>';
+		$str[] = '</div>';
+
+
+		$str[] = '<div id="' . $id . '_table" class="tablegrid">';
+		$str[] = '<table class="table table-striped table-bordered table-hover table-condensed table-sorted" style="margin-top:20px; min-width:'.$width.'px">';
+		
+		$str[] = '<thead>';
+		$str[] = '<tr>';
+		$str[] = '<th style="text-align:center" width="80px">' . JText::_('COM_JKCOMMODITY_LABEL_ACTION') . '</th>';
+		foreach ($fields as $field) {
+			if (in_array($field->type, array('Hidden', 'AltHidden'))) {
+				$str[] = '<th style="display:none"></th>';
+				continue;
+			}
+			$str[] = '<th style="text-align:center" width="' . $field->element['width'] . '">';
+			$str[] = strip_tags($field->getLabel($field->name)) . '</th>';
+		}
+		$str[] = '</tr>';
+		$str[] = '<tr class="rowItem" style="display:none">';
+
+		$str[] = '<td style="text-align:center">';
+		$str[] = '<div class="btn-group">';
+		$str[] = '<button class="editItem btn btn-small" type="button"><span class="icon-edit"></span></button>';
+		if(!$disableDel) {
+		$str[] = '<button class="delItem btn btn-danger btn-small" type="button"><i class="icon-delete icon-white"></i></button>';
+		}
+		$str[] = '</div>';
+		$str[] = '</td>';
+		foreach ($fields as $field) {
+			if (in_array($field->type, array('Hidden', 'AltHidden'))) {
+				$str[] = '<td class="' . $field->element['name'] . '" style="display:none">';
+				$str[] = '<span></span><input type="hidden"></input></td>';
+				continue;
+			}
+			$style = array();
+			$style[] = $field->element['align'] ? 'text-align:' . $field->element['align'] : 'text-align:left';
+			$str[] = '<td class="' . $field->element['name'] . '" style="' . implode(';', array_filter($style)) . '">';
+			$str[] = '<span></span><input type="hidden"></input></td>';
+		}
+
+		$str[] = '</tr>';
+		$str[] = '</thead>';
+		
+		$str[] = '<tbody class="noItem"><tr><td style="text-align:center" colspan="' . (count($names)+1) . '">' . JText::_('COM_JKCOMMODITY_TEXT_NO_DATA') . '</td></tr></tbody>';
+		$str[] = '<tbody class="dataRows" style="display:none"></tbody>';
+		
+		$str[] = '</table>';
+		$str[] = '</div>';
+		
+		
+		$names = json_encode($names);
+		
+		// Set hidden value
+		if (is_array($this->value)) {
+			$this->value = array_shift($this->value);
+		}
+		
+		$required = $this->required ? ' required aria-required="true"' : '';
+		
+		$value = htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8');
+
+		$str[] = str_replace('<label', '<label style="display:none" ', $this->getLabel());
+		$str[] = '<input type="hidden" name="'.$this->name.'" id="'.$this->id.'"'.$required.' value="'.$value.'"/>';
+		$str[] = '<input type="hidden" id="'.$this->id.'_editIndex'.'" />';
+		
+		// Load JSs
+		$document = JFactory::getDocument();
+		$document->addScript(JK_ADMIN_JS . '/tablegrid.js');
+		
+		// If a maximum value isn't set then we'll make the maximum amount of cells a large number
+		$maximum = $this->element['maximum'] ? (int)$this->element['maximum'] : '20';
+		
+		$script = "(function ($){
+			$(document).ready(function (){
+				var tablegrid_$id = new $.JTableGrid('$id', $names, '$maximum');
+			});
+		})(jQuery);";
+		$document->addScriptDeclaration($script);
+		
+		return implode(PHP_EOL, $str);
+	}
+	
+	function getSubForm() {
+		// Initialize variables.
+		$subForm = new JForm($this->name, array('control' => 'jform'));
+		
+		$xml = $this->element->children()->asXML();
+		
+		$subForm->load($xml);
+		
+		// Needed for repeating modals in gmaps
+		$subForm->repeatCounter = (int)@$this->form->repeatCounter;
+		$children = $this->element->children();
+		$subForm->setFields($children);
+		
+		return $subForm;
+	}
+}

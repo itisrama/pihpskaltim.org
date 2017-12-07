@@ -1,0 +1,26 @@
+// Helpers
+access
+array
+currency
+fieldset
+flot
+html
+morris
+number
+
+default             add addSubmenu() function
+
+// Core
+table               NEW
+controllerform      lot to change           DONE        NOT WORKING     ADD saveExternal(), getViewItem().
+modeladmin          lot to change           DONE        NOT WORKING     CHANGES WRITTEN
+modellist           need to add new stuff   DONE        WORKING         BREAK FRONT END LIST         changed jinput to input
+view                lot to change           DONE        NOT WORKING     BREAK FRONT END LIST
+
+// JS
+jquery.flot.min.js
+jquery.flot.navigate.min.js
+jquery-sortable-min.js
+morris.min.js
+raphael-min.js
+tablegrid.js

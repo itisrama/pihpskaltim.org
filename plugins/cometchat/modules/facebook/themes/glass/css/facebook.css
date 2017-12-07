@@ -1,0 +1,23 @@
+/*
+ * CometChat
+ * Copyright (c) 2016 Inscripts - support@cometchat.com | http://www.cometchat.com | http://www.inscripts.com
+*/
+
+html, body {
+	background: #777;
+	direction: <?php echo $dir;?>;
+	margin:0;
+	padding:0;
+	height: 100%;
+	width: 100%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+.fb_iframe_widget{
+	display: block !important;
+}
+
+.fb_iframe_widget span {
+	display: block !important;
+	margin: 0px auto !important;
+}

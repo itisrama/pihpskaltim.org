@@ -1,0 +1,140 @@
+@import cleanslate.css;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+
+.gtpihps-commodity{
+	float: left !important;
+	font-family: "Roboto Condensed", sans-serif !important;
+	width: 100% !important;
+}
+
+/* Enables vertical scrolling */
+.gtpihps-commodity,
+.gtpihps-commodity .cleanslate,
+.gtpihps-commodity .gtpihps-pricelist,
+.gtpihps-commodity .gtpihps-items{
+	height: inherit !important;
+}
+
+.gtpihps-commodity select{
+    border: 1px solid #cccccc !important;
+    border-radius: 0 !important;
+    height: 32px !important;
+    margin-bottom: 5px !important;
+    max-width: 200px;
+    padding: 6px 12px !important;
+    width: 100%;
+    webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+}
+
+.gtpihps-commodity .gtpihps-header{
+	text-align: center !important;
+}
+
+.gtpihps-commodity .gtpihps-header b,
+.gtpihps-commodity .gtpihps-header small{
+    display: inline-block;
+	margin-right: 10px !important;
+}
+
+/* Price list container */
+.gtpihps-commodity .gtpihps-pricelist li{
+	background-repeat: no-repeat !important;
+	background-position: 10px 25px !important;
+	cursor: pointer !important;
+	display: inline-block !important;
+	height: auto !important;
+	margin: 2.5px !important;
+	overflow: hidden !important;
+	/* width: 277.25px !important; */
+}
+
+.gtpihps-commodity .gtpihps-filter{
+	text-align: center !important;
+	width: 100% !important;
+}
+
+.gtpihps-commodity .gtpihps-items{
+	position: relative !important;
+	text-align: center !important;
+	overflow-x: hidden !important;
+	overflow-y: scroll !important;
+}
+
+.gtpihps-commodity .gtpihps-list-all{
+	display: inline-block !important;
+	padding-left: 0px !important;
+}
+
+.gtpihps-commodity .gtpihps-template,
+.gtpihps-commodity .gtpihps-list-price-still,
+.gtpihps-commodity .gtpihps-list-price-up,
+.gtpihps-commodity .gtpihps-list-price-down{
+	display: none !important;
+}
+
+/* Price title text */
+.gtpihps-commodity .gtpihps-pricelist a{
+    text-decoration: none !important;
+}
+
+.gtpihps-commodity .gtpihps-pricelist .gtpihps-title{
+	max-width: 220px !important;
+    /*white-space: nowrap !important;*/
+    text-transform: uppercase !important;
+    text-align: center !important;
+    /*margin: 3px !important;*/
+    padding: 3px 10px !important;
+}
+
+/* Price sparkline */
+.gtpihps-commodity .gtpihps-pricelist .gtpihps-spark{
+	display: inline-block;
+    /*position: absolute !important;*/
+    margin: 10px !important;
+}
+
+/* Price desc */
+.gtpihps-commodity .gtpihps-pricelist .gtpihps-desc{
+    line-height: 1.7em !important;
+    float: right !important;
+    text-align: right !important;
+    padding: 10px !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+}
+
+.gtpihps-commodity .gtpihps-pricelist .gtpihps-desc .gtpihps-price-now{
+	font-size: 27px !important;
+    font-weight: bold !important;
+}
+
+.gtpihps-commodity .gtpihps-pricelist .gtpihps-desc .gtpihps-price-desc{
+    display: inline-block !important;
+	padding: 0 10px !important;
+    margin-top: 5px !important;
+    margin-right: -10px !important;
+    width: auto !important;
+    text-align: right !important;
+    white-space: nowrap !important;
+}
+
+/* Table */
+.gtpihps-commodity .gtpihps-pricelist .gtpihps-tables{
+	bottom: -100% !important;
+	position: absolute !important;
+}
+
+.gtpihps-commodity .gtpihps-hidden {
+    display: none !important;
+}
+
+/* Custom Scrollbar */
+.gtpihps-commodity .gtpihps-items::-webkit-scrollbar{
+	width: 0.5em;
+}
+

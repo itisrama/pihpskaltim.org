@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="content" method="upgrade">
+	<name>pdf_embed</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright(C)2009-15 TechJoomla</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>1st October 2015</creationDate>
+	<version>2.1.5</version>
+	<description>PLG_PDF_EMBED_DESC</description>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_content_pdf_embed.ini</language>
+		<language tag="en-GB">en-GB.plg_content_pdf_embed.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="pdf_embed">pdf_embed.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="viewer" type="list" default="native" description="PLG_CONTENT_PDF_EMBED_SELECT_DEFAULT_VIEWER_DESC" label="PLG_CONTENT_PDF_EMBED_SELECT_DEFAULT_VIEWER">
+					<option value="native">native</option>
+					<option value="google">google</option>
+					<option value="pdfjs">pdfjs</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

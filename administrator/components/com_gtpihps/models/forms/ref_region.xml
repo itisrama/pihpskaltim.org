@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihps/models/fields">
+	<fields name="province">
+		<fieldset name="detail">
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_FIELD_PROVINCE"
+				class="input-large"
+			/>
+		</fieldset>
+	</fields>
+	<fields>
+		<fieldset name="detail">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_FIELD_NAME"
+				class="input-large"
+			/>
+			<field name="integration_url"
+				type="text"
+				label="COM_GTPIHPS_FIELD_INTEGRATION_URL"
+				class="input-large"
+			/>
+		</fieldset>
+		<fieldset name="edit">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="province_id"
+				type="province"
+				label="COM_GTPIHPS_FIELD_PROVINCE"
+				class="input-xlarge"
+				required="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_FIELD_NAME"
+				class="input-large"
+				required="true" 
+			/>
+			<field name="integration_url"
+				type="text"
+				label="COM_GTPIHPS_FIELD_INTEGRATION_URL"
+				class="input-large"
+			/>
+		</fieldset>
+		<fieldset name="commodities">
+			<field name="commodities"
+				type="tablegridbo"
+				label="COM_GTJOBORDER_FIELDSET_ACHIEVEMENT_RECEIPT"
+			>
+				<fields name="commodities">
+					<fieldset hidden="true" name="commodities_input" repeat="true">
+						<field name="id"
+							type="althidden"
+							readonly="true" 
+						/>
+						<field name="name"
+							type="text"
+							label="COM_GTPIHPS_FIELD_NAME"
+							class="input-medium"
+							width="25%"
+							grid-required="true"
+						/>
+						<field name="original_name"
+							type="text"
+							label="COM_GTPIHPS_FIELD_ORIGINAL_NAME"
+							class="input-medium"
+							width="25%"
+							grid-required="true"
+						/>
+						<field name="denomination"
+							type="text"
+							label="COM_GTPIHPS_FIELD_DENOMINATION"
+							class="input-medium"
+							width="25%"
+							grid-required="true"
+						/>
+						<field name="denomination_national"
+							type="text"
+							label="COM_GTPIHPS_FIELD_DENOMINATION_NATIONAL"
+							class="input-medium"
+							width="25%"
+						/>
+					</fieldset>
+				</fields>
+			</field>
+		</fieldset>
+	</fields>
+</form>

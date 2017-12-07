@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" method="upgrade" group="editors-xtd">
+	<name>pdf_btn</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright(C)2009-15 TechJoomla</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>1st October 2015</creationDate>
+	<version>2.1.5</version>
+	<description>Adds the button 'Embed-PDF' to the editor</description>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_editors-xtd_pdf_btn.ini</language>
+		<language tag="en-GB">en-GB.plg_editors-xtd_pdf_btn.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="pdf_btn">pdf_btn.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

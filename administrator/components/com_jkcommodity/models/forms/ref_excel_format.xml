@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_jkcommodity/models/fields">
+	<fields name="city">
+		<fieldset name="detail">
+			<field name="name"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_CITY"
+				class="input-large"
+			/>
+		</fieldset>
+	</fields>
+	<fields>
+		<fieldset name="detail">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+		</fieldset>
+		<fieldset name="edit">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="city_id"
+			    type="city"
+			    label="COM_JKCOMMODITY_LABEL_CITY"
+			    class="input-xlarge"
+			    required="true"
+			/>
+			<field name="commodity_column"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_COMMODITY_COLUMN"
+				class="input-large"
+				required="true" 
+			/>
+			<field name="market_columns"
+				type="textarea"
+				label="COM_JKCOMMODITY_LABEL_MARKET_COLUMNS"
+				class="input-large"
+				required="true" 
+			/>
+		</fieldset>
+	</fields>
+</form>

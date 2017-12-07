@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields>
+		<fieldset name="main" addfieldpath="/administrator/components/com_jkcommodity/models/fields">
+			<field name="id"
+				type="text"
+				class="readonly"
+				label="JGRID_HEADING_ID"
+				readonly="true" />
+			<field
+				type="calendar"
+				name="date"
+				id="date"
+				label="COM_JKCOMMODITY_LABEL_DATE"
+				description="COM_JKCOMMODITY_LABEL_DATE_DESC"
+				format="%Y-%m-%d"
+				filter=" "
+				required="true"
+			/>
+			<field
+				type="city"
+				name="city_id"
+				id="city_id"
+				label="COM_JKCOMMODITY_LABEL_CITY"
+				description="COM_JKCOMMODITY_LABEL_CITY_DESC"
+				default="0"
+				required="true"
+			>
+				<option value="">COM_JKCOMMODITY_FIELD_NO_CITY</option>
+			</field>
+		</fieldset>
+		<fieldset name="details">
+			<field name="details"
+				type="text"
+				class="input-small inputbox"
+				default="0"
+			/>
+		</fieldset>
+		<fieldset name="trades">
+			<field name="trades"
+				type="text"
+				class="input-small inputbox"
+				default="0"
+			/>
+		</fieldset>
+	</fields>
+</form>

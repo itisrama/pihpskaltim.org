@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+	<scripts>
+		<file>js/script.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>fonts/font-awesome/css/font-awesome.min.css</file>
+		<file>fonts/roboto/stylesheet.css</file>
+		<file>fonts/roboto-condensed/stylesheet.css</file>
+	</stylesheets>
+	
+</assets>

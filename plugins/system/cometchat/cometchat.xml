@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>CometChat</name>
+	<creationDate>28/05/2014</creationDate>
+	<author>CometChat</author>
+	<authorEmail>support@cometchat.com</authorEmail>
+	<authorUrl>http://www.cometchat.com</authorUrl>
+	<copyright>Inscripts</copyright>
+	<license></license>
+	<version>1.0</version>
+	<description>Enable audio/video/text chat on your Joomla site in minutes and increase user activity exponentially!</description>
+	<files>
+        <filename plugin="cometchat">cometchat.php</filename>
+    </files> 
+</extension>

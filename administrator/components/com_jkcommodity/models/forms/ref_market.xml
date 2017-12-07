@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_jkcommodity/models/fields">
+	<fields>
+		<fieldset name="detail">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_NAME"
+				class="input-large"
+			/>
+		</fieldset>
+		<fieldset name="edit">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="city_id"
+			    type="city"
+			    label="COM_JKCOMMODITY_LABEL_CITY"
+			    class="input-xlarge"
+			    required="true"
+			/>
+			<field name="name"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_NAME"
+				class="input-large"
+				required="true" 
+			/>
+			<field name="key"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_CODE_MARKET"
+				class="input-large"
+			/>
+			<field name="latitude"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_LATITUDE"
+				class="input-large"
+			/>
+			<field name="longitude"
+				type="text"
+				label="COM_JKCOMMODITY_LABEL_LONGITUDE"
+				class="input-large"
+			/>
+		</fieldset>
+	</fields>
+</form>

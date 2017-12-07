@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihps/models/fields">
+	<fields name="province">
+		<fieldset name="detail">
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_FIELD_PROVINCE"
+				class="input-large"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="region">
+	    <fieldset name="detail">
+	        <field name="name"
+	            type="text"
+	            label="COM_GTPIHPS_FIELD_REGION"
+	            class="input-large"
+	        />
+	    </fieldset>
+	</fields>
+	<fields>
+		<fieldset name="detail">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_FIELD_NAME"
+				class="input-large"
+			/>
+		</fieldset>
+		<fieldset name="edit">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="province_id"
+				type="province"
+				label="COM_GTPIHPS_FIELD_PROVINCE"
+				class="input-xlarge"
+				required="true" 
+			/>
+			<field name="region_id"
+			    type="region"
+			    label="COM_GTPIHPS_FIELD_REGION"
+			    class="input-xlarge"
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPS_FIELD_NAME"
+				class="input-large"
+				required="true" 
+			/>
+		</fieldset>
+	</fields>
+</form>
